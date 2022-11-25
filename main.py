@@ -2,14 +2,15 @@ from atm import atm
 title = 'CHƯƠNG TRÌNH RÚT TIỀN TẠI CÂY ATM'
 print(title.center(60))
 khachhang = ['Nguyễn Thị Thu Hiền', 'Nguyễn Vĩnh Ý', 'Đinh Hồng Cơ', 'Bùi Đăng Nguyên', 'Đỗ Thành Danh']
+tien = [30000000, 40000000, 50000000, 60000000, 70000000]
 name = str(input('Vui lòng nhập tên chủ tài khoản: '))
 if name == khachhang[0]:
-    atm(name, 5555, 500000, 100000)
+    atm(khachhang[0], 1, tien[0], 10000000)
 if name == khachhang[1]:
-    atm(name, 2510, 50000000, 10000000)
+    atm(khachhang[1], 2, tien[1], 10000000)
 if name == khachhang[2]:
-    atm(name, 1234, 50000000, 10000000)
+    atm(khachhang[2], 3, tien[2], 10000000)
 if name == khachhang[3]:
-    atm(name, 1111, 50000000, 10000000)
+    atm(khachhang[3], 4, tien[3], 10000000)
 if name == khachhang[4]:
-    atm(name, 2222, 50000000, 10000000)
+    atm(khachhang[4], 5, tien[4], 10000000)
