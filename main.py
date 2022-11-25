@@ -12,3 +12,4 @@ else:
         f1 = fn
         fn = f0 + f1
     print(f'Số hạng thứ {n} trong dãy Fibonacci là: {fn}')
+#djaisjdoasdjsaijodsa
