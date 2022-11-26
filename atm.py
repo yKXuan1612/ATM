@@ -1,8 +1,8 @@
-def atm(ten, password, tien, gioihanrut):
+def atm(tk, password, tien, gioihanrut):
     mapin = int(input('Hãy nhập mã PIN, nếu muốn ngừng sử dụng dịch vụ hãy nhập số 0: '))
     dem = 0
     if mapin == password:
-        print(f'Chủ thẻ: {ten} \nSố dư: {tien} VNĐ \nHạn mức giao dịch: {gioihanrut} VNĐ')
+        print(f'Chủ thẻ: {tk} \nSố dư: {tien} VNĐ \nHạn mức giao dịch: {gioihanrut} VNĐ')
     while True:
         if mapin != password:
             dem += 1
