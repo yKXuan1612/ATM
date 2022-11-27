@@ -5,9 +5,10 @@ tenkh = ['Ý', 'Hiền', 'Cơ', 'Nguyên', 'Danh']
 mk = [1, 2, 3, 4, 5]
 sodu = [30000000, 40000000, 50000000, 60000000, 70000000]
 hanmuc = [5000000, 10000000, 15000000, 20000000, 30000000]
-name = str(input('Vui lòng nhập tên chủ tài khoản: '))
-i = 0
-for ten in tenkh:
-    if name == tenkh:
-        i = tenkh.index(ten)
-        atm(tenkh[i], mk[i], sodu[i], hanmuc[i])
+while True:
+    name = str(input('Vui lòng nhập tên chủ tài khoản: '))
+    if name in tenkh:
+        i = tenkh.index(name)
+        atm(tenkh[i], mk[i], sodu[i], hanmuc[i], sodu, hanmuc, i)
+    if name == '0':
+        break
