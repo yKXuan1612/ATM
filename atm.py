@@ -1,6 +1,7 @@
 def atm(tk, password, tien, gioihanrut, changesodu, changehanmuc, stt):
     mapin = int(input('Hãy nhập mã PIN, nếu muốn ngừng sử dụng dịch vụ hãy nhập số 0: '))
     dem = 0
+    k = 3
     while True:
         if mapin == 0:
             break
@@ -41,4 +42,5 @@ def atm(tk, password, tien, gioihanrut, changesodu, changehanmuc, stt):
             else:
                 print('Bạn không có đủ tiền trong tài khoản, xin vui lòng thử lại')
         else:
-            mapin = int(input('Xin vui lòng nhập lại mã PIN, nếu muốn ngừng sử dụng dịch vụ hãy nhập số 0: '))
+            k -= 1
+            mapin = int(input(f'Xin vui lòng nhập lại mã PIN, bạn còn {k} lần: '))
