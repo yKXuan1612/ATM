@@ -1,5 +1,4 @@
 def atm(tk, password, tien, gioihanrut, changesodu, changehanmuc, stt, sodu_atm):
-    print(sodu_atm)
     mapin = int(input('Hãy nhập mã PIN, nếu muốn ngừng sử dụng dịch vụ hãy nhập số 0: '))
     k = 3
     while True:
