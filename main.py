@@ -16,4 +16,3 @@ while True:
         break
     if nganhang[0] <= 0:
         break
-
