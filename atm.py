@@ -11,23 +11,33 @@ def atm(tk, password, tien, gioihanrut, changesodu, changehanmuc, stt):
                 break
         if mapin == password:
             print(f'Chủ thẻ: {tk} \nSố dư: {tien} VNĐ \nHạn mức giao dịch: {gioihanrut} VNĐ')
-            ruttien = float(input('Hãy nhập số tiền cần rút: '))
+            ruttien = int(input('Hãy nhập số tiền cần rút: '))
             if ruttien == 0:
                 break
             if ruttien <= tien:
                 if gioihanrut < ruttien:
                     print('Số tiền rút vượt quá hạn mức giao dịch, xin vui lòng thử lại')
                 else:
-                    tien = tien - ruttien
-                    changesodu[stt] = tien
-                    print(f'Bạn đã rút thành công {ruttien} VNĐ \nSố dư: {tien} VNĐ')
-                    gioihanrut = gioihanrut - ruttien
-                    changehanmuc[stt] = gioihanrut
-                    if gioihanrut == 0:
-                        break
-                    q = str(input('Bạn có muốn tiếp tục giao dịch không: '))
-                    if q == 'Không':
-                        break
+                    if ruttien % 50000 == 0:
+                        tien = tien - ruttien
+                        changesodu[stt] = tien
+                        print(f'Bạn đã rút thành công {ruttien} VNĐ \nSố dư: {tien} VNĐ')
+                        gioihanrut = gioihanrut - ruttien
+                        changehanmuc[stt] = gioihanrut
+                        if gioihanrut == 0:
+                            break
+                        q = str(input('Bạn có muốn tiếp tục giao dịch không: '))
+                        if q == 'Không':
+                            bienlai = str(input('Bạn có muốn nhận hóa đơn không: '))
+                            if bienlai == 'Có':
+                                print(f'Chủ thẻ: {tk} \nSố tiền đã giao dịch: {ruttien} \nSố dư: {tien} VNĐ')
+                                break
+                            if bienlai == 'Không':
+                                break
+                    else:
+                        q = str(input('Số tiền giao dịch phải là bội số của 50000, bạn có muốn tiếp tục giao dịch khác không: '))
+                        if q == 'Không':
+                            break
             else:
                 print('Bạn không có đủ tiền trong tài khoản, xin vui lòng thử lại')
         else:
