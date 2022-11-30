@@ -1,17 +1,17 @@
 def atm(tk, password, tien, gioihanrut, changesodu, changehanmuc, stt, sodu_atm):
     print(sodu_atm)
     mapin = int(input('Hãy nhập mã PIN, nếu muốn ngừng sử dụng dịch vụ hãy nhập số 0: '))
-    dem = 0
     k = 3
     while True:
         if mapin == 0:
             break
         elif mapin != password:
-            dem += 1
-            if dem == 3:
+            k -= 1
+            if k == 0:
                 print('Bạn đã nhập sai mã PIN quá số lần quy định')
                 break
-        elif mapin == password:
+            mapin = int(input(f'Xin vui lòng nhập lại mã PIN, bạn còn {k} lần: '))
+        else:
             print(f'Chủ thẻ: {tk} \nSố dư: {tien} VNĐ \nHạn mức giao dịch: {gioihanrut} VNĐ')
             ruttien = int(input('Hãy nhập số tiền cần rút: '))
             if ruttien == 0:
@@ -45,6 +45,3 @@ def atm(tk, password, tien, gioihanrut, changesodu, changehanmuc, stt, sodu_atm)
                             break
             else:
                 print('Bạn không có đủ tiền trong tài khoản, xin vui lòng thử lại')
-        else:
-            k -= 1
-            mapin = int(input(f'Xin vui lòng nhập lại mã PIN, bạn còn {k} lần: '))

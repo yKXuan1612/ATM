@@ -6,7 +6,7 @@ tentk = ['y', 'hien', 'co', 'nguyen', 'danh']
 mk = [1, 2, 3, 4, 5]
 sodu = [30000000, 40000000, 50000000, 60000000, 70000000]
 hanmuc = [5000000, 10000000, 15000000, 20000000, 30000000]
-nganhang = [10000000]
+nganhang = [100000000]
 while True:
     name = str(input('Hãy nhập tên tài khoản, nếu muốn ngừng sử dụng dịch vụ hãy nhập số 0: '))
     if name in tentk:
